@@ -1,5 +1,5 @@
 .onLoad <- function(...) {
-  packageStartupMessage("bdeseries v0.1 - miguel@fabiansalazar.es")
+  packageStartupMessage("tesorotools 20230814 - miguel@fabiansalazar.es")
 
   grDevices::windowsFonts(Calibri = windowsFont("Calibri"))
 
@@ -68,52 +68,6 @@
 
   x_percentage <- ggplot2::scale_x_continuous(labels = scales::percent)
   y_percentage <- ggplot2::scale_y_continuous(labels = scales::percent)
-
-  usethis::use_data(colores,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(colores_new,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(tema_gabinete,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(favorables_desfavorables_colors,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(remove_legend,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(plain_numbers_y_axis,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(fuente,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(x_millones,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(y_millones,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(y_miles_millones,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(x_date_hook,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(x_diagonal,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(color_hook,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(x_percentage,
-                    internal = FALSE,
-                    overwrite = TRUE)
-  usethis::use_data(y_percentage,
-                    internal = FALSE,
-                    overwrite = TRUE)
 
 
 }
