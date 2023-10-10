@@ -22,7 +22,8 @@ generar_plotly <- function(plot_ggplot,
                            showlegend=TRUE,
                            yaxisposition="right",
                            nombre_plotly_final="",
-                           hoverhorizontal = FALSE) {
+                           hoverhorizontal = FALSE,
+                           returnplot=FALSE) {
 
   nombre_plot <- deparse(substitute(plot_ggplot))
   nombre_plot_split <- stringr::str_split(nombre_plot, "_")[[1]]
@@ -31,9 +32,9 @@ generar_plotly <- function(plot_ggplot,
 
   if(hoververtical & !hoverhorizontal) {
     new_plotly <- plot_ggplot |>
-      ggplotly(tooltip = label) |>
-      layout(hoverlabel=list(bgcolor="white")) |>
-      layout(yaxis = list(side=yaxisposition,
+      plotly::ggplotly(tooltip = label) |>
+      plotly::layout(hoverlabel=list(bgcolor="white")) |>
+      plotly::layout(yaxis = list(side=yaxisposition,
                           hoverformat=".2f"),
              legend=list(title="none",
                          x=legendx, y=legendy,
@@ -84,7 +85,9 @@ generar_plotly <- function(plot_ggplot,
     assign(nombre_plotly_final, new_plotly, envir=.GlobalEnv)
   }
 
-  #return(get(nombre_plot_plotly))
+  if (returnplot) {
+    return(get(nombre_plot_plotly))
+  }
 
 }
 

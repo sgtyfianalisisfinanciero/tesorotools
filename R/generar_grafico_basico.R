@@ -12,11 +12,11 @@
 #' generar_grafico_basico()
 
 generar_grafico_basico <- function(datos,
-         .accuracy=0.1,
-         .scale=1,
-         .suffix="",
-         .big.mark=".",
-         .decimal.mark=",") {
+                                   .accuracy=0.1,
+                                   .scale=1,
+                                   .suffix="",
+                                   .big.mark=".",
+                                   .decimal.mark=",") {
 
   datos_df <- datos %>%
     mutate(Fecha = paste0(fecha, "\n",
@@ -33,7 +33,7 @@ generar_grafico_basico <- function(datos,
                                 label=Fecha)) +
     geom_line(linewidth=1)+
     tema_gabinete +
-    scale_color_manual(values = colores_new[c(1,2,3,4,5,6,7,8)]) +
+    scale_color_manual(values = colores_new[1:nrow(datos %>% distinct(nombres))]) +
     scale_x_date(date_labels = "%Y",
                  date_breaks = "1 year") +
     scale_y_continuous(labels = scales::number_format(accuracy=.accuracy,

@@ -1,5 +1,5 @@
 .onLoad <- function(...) {
-  packageStartupMessage("tesorotools 20230817 - miguel@fabiansalazar.es")
+  packageStartupMessage("tesorotools 20231010 - miguel@fabiansalazar.es")
 
   grDevices::windowsFonts(Calibri = windowsFont("Calibri"))
 
