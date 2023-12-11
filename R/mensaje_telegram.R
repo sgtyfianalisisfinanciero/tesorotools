@@ -10,7 +10,7 @@ mensaje_telegram <- function(bot,
                              mensaje) {
 
   # extraemos lista de ids
-  chat_id_list <- stringr::str_split(Sys.getenv("R_TELEGRAM_BOT_CHAT_IDS")[[1]], ";")
+  chat_id_list <- as.double(stringr::str_split(Sys.getenv("R_TELEGRAM_BOT_CHAT_IDS")[[1]], ";")[[1]])
 
   if(is.null(bot)) {
     message("No se ha inicializado el bot.")
