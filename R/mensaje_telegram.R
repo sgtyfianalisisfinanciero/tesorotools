@@ -21,7 +21,7 @@ mensaje_telegram <- function(bot,
   message(mensaje)
 
   for(chat_id in chat_id_list) {
-    bot$send_message(chat_id=as_double(chat_id),
+    bot$send_message(chat_id=chat_id,
                      text=mensaje)
   }
 
