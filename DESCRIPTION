@@ -1,7 +1,7 @@
 Package: tesorotools
 Type: Package
 Title: Herramientas Comunes de SG Análisis Financiero (Tesoro)
-Version: 0.2
+Version: 0.21
 Author: Miguel Fabián
 Maintainer: Miguel Fabián <mfabian@economia.gob.es>
 Description: Herramientas comunes a los proyectos en R de la SG Análisis Financiero (tesoro)

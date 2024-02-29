@@ -13,7 +13,7 @@ generar_png <- function(.grafico_a_png, width_png=500, height_png = 500, res_png
 
   .pngfile <- tempfile(fileext = ".png")
 
-  grDevices::png(filename = pngfile,
+  grDevices::png(filename = .pngfile,
                  width = width_png,
                  height = height_png,
                  # units = "in",
