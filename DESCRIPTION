@@ -1,0 +1,14 @@
+Package: tesorotools
+Type: Package
+Title: Herramientas Comunes de SG Análisis Financiero (Tesoro)
+Version: 0.23
+Author: Miguel Fabián
+Maintainer: Miguel Fabián <mfabian@economia.gob.es>
+Description: Herramientas comunes a los proyectos en R de la SG Análisis Financiero (tesoro)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.3.1
